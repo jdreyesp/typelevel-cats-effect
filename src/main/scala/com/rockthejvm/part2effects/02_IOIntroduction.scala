@@ -134,7 +134,9 @@ object IOIntroduction extends IOApp {
         prev <- fibonacci(n - 2)
       } yield last + prev
 
-  // import cats.effect.unsafe.implicits.global // "platform" used for unsafeRunSync
+  // other way of running IOs
+
+  // import cats.effect.unsafe.implicits.global // "platform" (thread pool + IO Runtime) used for unsafeRunSync
   // this should be called only at the end of your application
   // println(aDelayedIO.unsafeRunSync())
   // smallProgram_v2().unsafeRunSync()
